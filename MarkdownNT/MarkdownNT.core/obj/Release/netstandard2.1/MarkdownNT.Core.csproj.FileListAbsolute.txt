@@ -1,9 +1,0 @@
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.GeneratedMSBuildEditorConfig.editorconfig
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.AssemblyInfoInputs.cache
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.AssemblyInfo.cs
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.csproj.CoreCompileInputs.cache
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\bin\Release\netstandard2.1\MarkdownNT.Core.deps.json
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\bin\Release\netstandard2.1\MarkdownNT.Core.dll
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\bin\Release\netstandard2.1\MarkdownNT.Core.pdb
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.dll
-M:\MarkdownNT\MarkdownNT\MarkdownNT\MarkdownNT.core\obj\Release\netstandard2.1\MarkdownNT.Core.pdb

@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = MarkdownNT.Plugin.Test
-build_property.ProjectDir = M:\Z-HeliWork\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 
