@@ -1,0 +1,62 @@
+MarkdownNT 仓库 — 程序/组件功能说明
+
+概览：
+本文件列出仓库内主要项目与工具的职责、所在路径与运行/开发要点，便于开发者快速定位与使用。
+
+1) MarkdownNT（主编辑器 — 二进制/发布）
+路径：MarkdownNT
+功能：桌面编辑器 UI（Avalonia）；整合编辑器、渲染、插件宿主。编辑器界面代码部分可能作为二进制随发行版提供。
+
+2) MarkdownNT.Core（核心解析/导出）
+路径：MarkdownNT\MarkdownNT\MarkdownNT.core
+功能：项目的核心库，负责：
+- Markdown 自定义语法解析（代码块、特殊标记）
+- 导出/渲染支持（PDF/HTML 等）
+- 提供供插件与宿主调用的核心服务接口
+
+3) MarkdownNT.Plugin.Abstractions（插件 API）
+路径：MarkdownNT\MarkdownNT.Plugin.Abstractions
+功能：定义插件边界与数据结构（如 IMdNTCode、MdNTCodeRule、MdNTCodeStyle），用于插件与宿主之间的契约。
+
+4) MarkdownNT.Plugin.Test（示例插件）
+路径：MarkdownNT\MarkdownNT.Plugin.Test
+功能：示例/测试用插件实现，包含若干规则用于验证宿主加载、规则匹配与展示逻辑。
+
+5) MarkdownNT.Lab（插件开发工作台）
+路径：MarkdownNT\MarkdownNT.Lab
+功能：轻量级插件开发/调试应用（Avalonia），核心能力：
+- 选择/持久化插件目录（%APPDATA%\MarkdownNT.Lab\plugin-folder.txt）
+- 加载 DLL 插件（直接 ILabPlugin 或 反射适配 IMdNTCode）
+- 启用/禁用插件并持久化（enabled-plugins.txt）
+- 运行规则测试（关键词/正则），展示命中列表与上下文
+- 格式化预览：按插件 Style 渲染命中文本
+- 插件详情弹窗、模板生成与快速调试流程
+
+6) 文档（Docsify）
+路径：docs、index.html
+功能：项目说明、快速上手、插件 API 与发布说明，部署到 GitHub Pages（docsify）用于对外说明。
+
+7) 发布/打包目录（Release）
+路径：MarkdownNT-Release（独立）
+功能：包含已编译的编辑器发布包（不一定包含全部编辑器源码），用于用户下载安装。
+
+快速运行（Lab）
+- cd MarkdownNT\MarkdownNT.Lab
+- dotnet restore
+- dotnet build
+- dotnet run
+
+调试提示
+- 插件无法识别：确认 DLL 为 .NET 程序集、并且引用的 Plugin.Abstractions 版本兼容；在 Lab 中查看控制台错误（加载异常已写入 Console.Error）。
+- 样式/颜色无效：确保插件返回的颜色可被 Color.TryParse 解析（例如 #RRGGBB 或已知颜色名）。
+
+配置文件位置（Lab）
+- 插件目录保存：%APPDATA%\MarkdownNT.Lab\plugin-folder.txt
+- 启用插件列表：%APPDATA%\MarkdownNT.Lab\enabled-plugins.txt
+
+后续建议
+- 在 Lab 增加插件构建/编译并自动部署到插件目录的功能
+- 将加载错误与堆栈在 GUI 中可见化，提升诊断效率
+- 为核心库增加更多单元/集成测试，确保规则解析兼容性
+
+若需把本说明改为 Markdown 格式或移动到项目根 README，请告知。

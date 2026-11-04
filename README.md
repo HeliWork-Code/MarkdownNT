@@ -1,56 +1,114 @@
-# MarkdownNT (.mdnt)
+# MarkdownNT
 
-**下一代 Markdown，为笔记、音频和 AI 而生。**
+MarkdownNT 是一个轻量、可扩展的 Markdown 笔记项目，当前开源部分聚焦于：
 
-> 状态：1.0版本内核已经发布，包含MarkdownNT基础语法和HTML导出
+- `MarkdownNT.Core`：无 UI 的 Markdown 解析与导出核心
+- `MarkdownNT.Plugin.Abstractions`：插件接口层
+- `MarkdownNT.Plugin.Test`：示例插件与测试案例
+- 文档站点：Docsify 文档
 
-MarkdownNT（简称 **MDNT**）是一种基于 Markdown 的增强型纯文本格式，旨在保持简单、可读、可迁移的同时，原生支持现代笔记场景所需的**音频关联**、**AI 元数据**和**结构化内容**。
+说明：官方编辑器（GUI）不在本仓库中提供完整源码，通常仅在 GitHub Release 中发布编译后的二进制文件。
 
-**NT 代表：**
-- **N**o**t**e —— 为记录而生
-- **N**ew **T**echnology —— 融入现代 AI 技术
-- **N**ex**t** —— 下一代 Markdown
+## 目标
 
----
+- 保持核心无 UI、无依赖的设计
+- 提供标准 Markdown 解析与导出能力
+- 支持插件扩展自定义语法和样式
+- 让开发者可以直接复用内核并构建自己的宿主应用
 
-## ✨ 功能特性
+## 目录结构
 
-- ✅ 完全兼容标准 Markdown 子集
-- 🎙️ 音频块：关联录音文件、时间戳和说话人
-- 🤖 AI 元数据：标记 AI 生成的摘要、待办等
-- ⌨️ 快捷代码块：`>>>语言` 快速创建高亮代码块
-- 📊 表格快捷创建：输入 `|` 自动引导
-- 📝 极简语法：不打断心流，会打字就会排版
-- 🌗 深色/浅色模式切换
-- 💾 本地保存、自动保存、文件打开
-- 📤 导出为 HTML
+```text
+MarkdownNT/
+├─ README.md
+├─ index.html
+├─ docs/
+│  ├─ home.md
+│  ├─ _sidebar.md
+│  ├─ start.md
+│  ├─ plugins.md
+│  ├─ api.md
+│  ├─ release.md
+│  └─ ...
+├─ MarkdownNT/
+│  ├─ MarkdownNT.csproj
+│  ├─ MainWindow.axaml
+│  ├─ MainWindow.axaml.cs
+│  ├─ Update.txt
+│  └─ MarkdownNT.core/
+│     ├─ MarkdownNT1.0.cs
+│     ├─ MarkdownNT.Core.csproj
+│     └─ 使用MarkdownNT.Core.dll.md
+├─ MarkdownNT.Plugin.Abstractions/
+│  ├─ MdNTCode.cs
+│  ├─ MarkdownNT.Plugin.Abstractions.csproj
+│  ├─ README.md
+│  └─ 如何编写插件.md
+├─ MarkdownNT.Plugin.Test/
+│  ├─ MdNTCodeTestPlugin.cs
+│  ├─ MdNTCode-Test.mdnt
+│  └─ MarkdownNT.Plugin.Test.csproj
+└─ MarkdownNT.slnx
+```
 
----
+## 开源内容
 
-## 📄 语法示例
+### MarkdownNT.Core
 
-````markdown
-@meta {
-  "title": "产品评审会",
-  "tags": ["会议", "产品"]
-}
+核心库负责：
 
-# 产品评审会
+- Markdown 解析
+- 标题、段落、列表、引用、代码块和表格识别
+- HTML 导出
+- PDF 导出（仍在迭代中）
 
-@audio {
-  "file": "attachments/audio-20260824.wav",
-  "start": 0,
-  "end": 12.3,
-  "speaker": "张三"
-}
+### MarkdownNT.Plugin.Abstractions
 
-@speaker 张三
-我们来看一下这个项目的进度。
+插件接口用于：
 
->>>python
-print("Hello, MDNT!")
->>>
+- 定义 `IMdNTCode`
+- 定义 `MdNTCodeRule`
+- 定义 `MdNTCodeStyle`
+- 支持规则优先级、样式和暗色模式配置
 
-| 任务 | 负责人 |
-| --- | --- |
-| 文档 | 张三 |
+### MarkdownNT.Plugin.Test
+
+测试插件用于验证：
+
+- 关键词高亮
+- 正则表达式规则
+- 亮色/暗色样式
+- 字体和装饰效果
+- 插件加载和管理
+
+## 文档站点
+
+文档已整理到 Docsify：
+
+- [首页](./docs/home.md)
+- [开始使用](./docs/start.md)
+- [插件开发指南](./docs/plugins.md)
+- [API 概览](./docs/api.md)
+- [发布说明](./docs/release.md)
+
+## 构建
+
+```powershell
+dotnet build MarkdownNT.slnx -c Release
+```
+
+## 版本说明
+
+当前开源部分版本：
+
+- MarkdownNT.Core: v1.1.4
+- MarkdownNT.Plugin.Abstractions: v1.1.4
+- MarkdownNT.Plugin.Test: v1.0.0
+
+## 许可证
+
+当前仓库未声明正式许可证。请在发布前根据你的使用场景补充合适的开源许可证（例如 MIT 或 Apache 2.0）。
+
+## 贡献
+
+欢迎提交 Issue、PR 和建议。对于核心解析、插件接口、样式扩展、文档完善等内容，均欢迎贡献。

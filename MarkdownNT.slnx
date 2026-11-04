@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MarkdownNT/MarkdownNT.csproj" />
+  <Project Path="MarkdownNT/MarkdownNT.core/MarkdownNT.Core.csproj" />
+  <Project Path="MarkdownNT.Plugin.Abstractions/MarkdownNT.Plugin.Abstractions.csproj" />
+  <Project Path="MarkdownNT.Plugin.Test/MarkdownNT.Plugin.Test.csproj" />
+</Solution>
