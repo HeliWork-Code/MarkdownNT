@@ -1,0 +1,14 @@
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Test.deps.json
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Test.dll
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Test.pdb
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.dll
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.pdb
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.xml
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.csproj.AssemblyReference.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.GeneratedMSBuildEditorConfig.editorconfig
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.AssemblyInfoInputs.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.AssemblyInfo.cs
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.csproj.CoreCompileInputs.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\Markdown.91F03DFE.Up2Date
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.dll
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Test\obj\Release\netstandard2.0\MarkdownNT.Plugin.Test.pdb

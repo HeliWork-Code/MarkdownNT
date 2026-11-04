@@ -1,0 +1,12 @@
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.deps.json
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.dll
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.pdb
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\bin\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.xml
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.csproj.AssemblyReference.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.AssemblyInfoInputs.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.AssemblyInfo.cs
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.csproj.CoreCompileInputs.cache
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.dll
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.xml
+M:\MarkdownNT\MarkdownNT\MarkdownNT.Plugin.Abstractions\obj\Release\netstandard2.0\MarkdownNT.Plugin.Abstractions.pdb

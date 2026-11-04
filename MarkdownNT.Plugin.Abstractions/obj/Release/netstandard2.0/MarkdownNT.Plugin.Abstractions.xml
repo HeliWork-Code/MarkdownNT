@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarkdownNT.Plugin.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:MarkdownNT.Plugin.Abstractions.MdNTCodeRule">
+            <summary>描述一个 MarkdownNT 自定义代码规则。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeRule.Name">
+            <summary>规则名称。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeRule.Keyword">
+            <summary>用于简单匹配的关键词。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeRule.Expression">
+            <summary>用于复杂匹配的正则表达式。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeRule.Priority">
+            <summary>规则优先级，数值越大越优先。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeRule.Style">
+            <summary>匹配内容的显示样式。</summary>
+        </member>
+        <member name="T:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle">
+            <summary>描述 MdNTCode 匹配结果的显示样式。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Foreground">
+            <summary>前景色，例如 #FF8800。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Background">
+            <summary>背景色，例如 #FFF0CC。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.DarkForeground">
+            <summary>暗色模式下的前景色，例如 #FFD580。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.DarkBackground">
+            <summary>暗色模式下的背景色，例如 #4A3A20。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.FontFamily">
+            <summary>字体族名称。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Bold">
+            <summary>是否使用粗体。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Italic">
+            <summary>是否使用斜体。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Underline">
+            <summary>是否使用下划线。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Strikethrough">
+            <summary>是否使用删除线。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.MdNTCodeStyle.Effect">
+            <summary>可选的效果名称，由宿主解释。</summary>
+        </member>
+        <member name="T:MarkdownNT.Plugin.Abstractions.IMdNTCode">
+            <summary>提供 MarkdownNT 自定义语法规则的插件。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.IMdNTCode.Id">
+            <summary>插件唯一标识。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.IMdNTCode.Name">
+            <summary>插件显示名称。</summary>
+        </member>
+        <member name="P:MarkdownNT.Plugin.Abstractions.IMdNTCode.Version">
+            <summary>插件版本。</summary>
+        </member>
+        <member name="M:MarkdownNT.Plugin.Abstractions.IMdNTCode.GetRules">
+            <summary>返回插件提供的自定义语法规则。</summary>
+        </member>
+    </members>
+</doc>

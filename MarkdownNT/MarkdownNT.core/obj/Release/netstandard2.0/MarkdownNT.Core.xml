@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarkdownNT.Core</name>
+    </assembly>
+    <members>
+        <member name="T:MarkdownNT.MarkdownNTIdentity">
+            <summary>MarkdownNT 内核的构建身份信息。</summary>
+        </member>
+        <member name="F:MarkdownNT.MarkdownNTIdentity.IS_OFFICIAL">
+            <summary>
+            是否声明为 MarkdownNT 官方构建。开发者创建修改版时应将其改为 false。
+            </summary>
+        </member>
+        <member name="T:MarkdownNT.BlockType">
+            <summary>MarkdownNT 文档块的类型。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Heading">
+            <summary>标题。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Quote">
+            <summary>引用。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.ListItem">
+            <summary>无序列表项。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Divider">
+            <summary>分隔线。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Special">
+            <summary>MarkdownNT 特殊块。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.CodeBlock">
+            <summary>代码块。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Table">
+            <summary>管道表格。</summary>
+        </member>
+        <member name="F:MarkdownNT.BlockType.Paragraph">
+            <summary>普通段落。</summary>
+        </member>
+        <member name="T:MarkdownNT.MarkdownBlock">
+            <summary>MarkdownNT 解析后的文档块。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownBlock.Type">
+            <summary>文档块类型。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownBlock.Level">
+            <summary>标题等级，范围为 1 到 6。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownBlock.Text">
+            <summary>块的文本内容。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownBlock.Language">
+            <summary>代码块的语言标识。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownBlock.Lines">
+            <summary>代码块或表格的原始行。</summary>
+        </member>
+        <member name="T:MarkdownNT.TableColumnAlignment">
+            <summary>表格列的对齐方式。</summary>
+        </member>
+        <member name="F:MarkdownNT.TableColumnAlignment.Left">
+            <summary>左对齐。</summary>
+        </member>
+        <member name="F:MarkdownNT.TableColumnAlignment.Center">
+            <summary>居中对齐。</summary>
+        </member>
+        <member name="F:MarkdownNT.TableColumnAlignment.Right">
+            <summary>右对齐。</summary>
+        </member>
+        <member name="T:MarkdownNT.MarkdownTable">
+            <summary>解析后的 MarkdownNT 表格。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownTable.HasHeader">
+            <summary>是否存在表头。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownTable.Headers">
+            <summary>表头单元格。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownTable.Rows">
+            <summary>表格数据行。</summary>
+        </member>
+        <member name="P:MarkdownNT.MarkdownTable.Alignments">
+            <summary>每一列的对齐方式。</summary>
+        </member>
+        <member name="T:MarkdownNT.MarkdownParser">
+            <summary>MarkdownNT 文本解析器。</summary>
+        </member>
+        <member name="M:MarkdownNT.MarkdownParser.TryParseCodeBlockDelimiter(System.String,System.Boolean@,System.String@)">
+            <summary>尝试识别代码块分隔符。</summary>
+            <param name="line">待解析的行。</param>
+            <param name="isEnd">该分隔符是否标识代码块结束。</param>
+            <param name="language">分隔符中的语言标识。</param>
+            <returns>如果该行属于代码块分隔符，则返回 true。</returns>
+        </member>
+        <member name="M:MarkdownNT.MarkdownParser.Parse(System.String)">
+            <summary>将 MarkdownNT 文本解析为文档块列表。</summary>
+            <param name="markdownText">待解析的文本。</param>
+            <returns>文档块列表。</returns>
+        </member>
+        <member name="M:MarkdownNT.MarkdownParser.ParseTable(System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>解析表格的表头、数据行和列对齐方式。</summary>
+            <param name="tableLines">表格原始行。</param>
+            <returns>解析后的表格。</returns>
+        </member>
+        <member name="T:MarkdownNT.HtmlExporter">
+            <summary>将 MarkdownNT 文本导出为完整 HTML 文档。</summary>
+        </member>
+        <member name="M:MarkdownNT.HtmlExporter.ExportToHtml(System.String)">
+            <summary>导出 HTML 文档。</summary>
+            <param name="markdownText">待导出的 MarkdownNT 文本。</param>
+            <returns>完整 HTML 文档字符串。</returns>
+        </member>
+        <member name="T:MarkdownNT.PdfExporter">
+            <summary>将 MarkdownNT 文本导出为 PDF 文档。</summary>
+        </member>
+        <member name="M:MarkdownNT.PdfExporter.ExportToPdf(System.String)">
+            <summary>导出 PDF 字节数组。</summary>
+            <param name="markdownText">待导出的 MarkdownNT 文本。</param>
+            <returns>PDF 文件内容。</returns>
+        </member>
+        <member name="M:MarkdownNT.PdfExporter.ExportToPdf(System.String,System.IO.Stream)">
+            <summary>将 MarkdownNT 文本写入 PDF 流。</summary>
+            <param name="markdownText">待导出的 MarkdownNT 文本。</param>
+            <param name="output">可写输出流。</param>
+        </member>
+    </members>
+</doc>
