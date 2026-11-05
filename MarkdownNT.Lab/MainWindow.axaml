@@ -1,0 +1,74 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MarkdownNT.Lab.MainWindow"
+        Title="MarkdownNT.Lab - 插件工作台"
+        Width="1100" Height="700" MinWidth="900" MinHeight="500">
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="1.2*,1*" Margin="12" ColumnSpacing="12" RowSpacing="12">
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Spacing="10">
+            <Button x:Name="LoadPluginsButton" Content="加载插件" Width="110" />
+            <Button x:Name="RunRulesButton" Content="运行规则测试" Width="130" />
+            <Button x:Name="GenerateTemplateButton" Content="生成插件模板" Width="130" />
+            <TextBlock Text="MarkdownNT.Lab" VerticalAlignment="Center" FontWeight="Bold" Margin="20,0,0,0" />
+        </StackPanel>
+
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" CornerRadius="6" Padding="8">
+            <Grid ColumnDefinitions="*,6,*">
+                <Grid RowDefinitions="Auto,*">
+                    <TextBlock Text="编辑" FontWeight="Bold" Margin="0,0,0,8" />
+                    <TextBox x:Name="InputBox"
+                             Grid.Row="1"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             FontFamily="Consolas,monospace"
+                             Text="# MarkdownNT.Lab&#10;&#10;TODO: 这里是一个测试任务。&#10;&#10;[[重要内容]]&#10;&#10;- 列表项一&#10;- 列表项二" />
+                </Grid>
+
+                <GridSplitter Grid.Column="1"
+                              Width="6"
+                              Background="#DDDDDD"
+                              ResizeDirection="Columns"
+                              ResizeBehavior="PreviousAndNext" />
+
+                <Grid Grid.Column="2" RowDefinitions="Auto,*">
+                    <TextBlock Text="预览" FontWeight="Bold" Margin="0,0,0,8" />
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <Border Background="#FAFAFA"
+                                Padding="8"
+                                BorderBrush="#DDDDDD"
+                                BorderThickness="1">
+                            <TextBlock x:Name="FormattedPreview"
+                                       TextWrapping="Wrap"
+                                       FontFamily="Consolas,monospace" />
+                        </Border>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" CornerRadius="6" Padding="8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" MinHeight="80" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="插件列表" FontWeight="Bold" Margin="0,0,0,8" />
+                <ListBox x:Name="PluginList" Grid.Row="1" />
+
+                <TextBlock Grid.Row="2" Text="规则命中结果" FontWeight="Bold" Margin="0,12,0,8" />
+                <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+                    <ListBox x:Name="ResultList" />
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Gray" BorderThickness="1" CornerRadius="6" Padding="8">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <TextBlock Text="插件目录：" VerticalAlignment="Center" Margin="0,0,12,0" />
+                <TextBox x:Name="PluginPathBox" Grid.Column="1" Text="./Plugins" />
+                <Button x:Name="ChangePluginFolderButton" Grid.Column="2" Content="更改目录" Margin="8,0,0,0" Width="110" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

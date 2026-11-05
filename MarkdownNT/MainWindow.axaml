@@ -1,0 +1,61 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        x:Class="MarkdownNT.MainWindow"
+        Title="MarkdownNT Official Editor v1.1.4"
+        Width="1200" Height="600">
+    <Grid RowDefinitions="Auto,*,24">
+        <!-- 顶部工具栏 -->
+        <Grid Grid.Row="0" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*,Auto" Margin="5" ColumnSpacing="4">
+            <Button Grid.Column="0" Content="新建" Click="NewFile_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="1" Content="打开" Click="OpenFile_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="2" Content="保存" Click="SaveFile_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="3" Content="导出HTML" Click="ExportHtml_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="4" Content="导出PDF" Click="ExportPdf_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="5" Content="选择字体" Click="SelectFont_Click" Padding="6,2" FontSize="12"/>
+            <Button Grid.Column="6" Content="插件管理" Click="ManagePlugins_Click" Padding="6,2" FontSize="12"/>
+            <TextBlock Grid.Column="7" Text="MarkdownNT 实时预览" FontSize="14" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Button Grid.Column="8" Content="切换主题" Click="ToggleTheme_Click" Padding="6,2" FontSize="12"/>
+        </Grid>
+
+        <!-- 主内容区 -->
+        <Grid Grid.Row="1" ColumnDefinitions="3*,4,2*" Margin="5">
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Margin="0,0,4,0">
+                <AvaloniaEdit:TextEditor x:Name="InputBox"
+                         IsReadOnly="False"
+                         Focusable="True"
+                         IsHitTestVisible="True"
+                         WordWrap="True"
+                         FontFamily="Consolas, monospace"
+                         FontSize="14"
+                         Foreground="Black"
+                         Background="White"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch" />
+            </Border>
+            <GridSplitter Grid.Column="1" Width="4" Background="Transparent"
+                          HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <Border Grid.Column="2" BorderBrush="Gray" BorderThickness="1" Padding="5">
+                <ScrollViewer>
+                    <StackPanel x:Name="PreviewPanel" Spacing="2" Margin="5"/>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <!-- 底部状态栏 -->
+        <Grid Grid.Row="2" ColumnDefinitions="*,Auto,Auto,Auto" Margin="5,0">
+            <TextBlock Grid.Column="0" x:Name="StatusText" Text="就绪"
+                       Foreground="Gray" FontSize="11" VerticalAlignment="Center"
+                       TextTrimming="CharacterEllipsis"/>
+            <TextBlock Grid.Column="1" x:Name="WordCountText" Text="0字 / 0词"
+                       Foreground="Gray" FontSize="11" Margin="8,0,0,0" VerticalAlignment="Center"
+                       MaxWidth="120" TextTrimming="CharacterEllipsis"/>
+            <TextBlock Grid.Column="2" x:Name="AutoSaveText" Text="自动保存: 关"
+                       Foreground="Gray" FontSize="11" Margin="8,0,0,0" VerticalAlignment="Center"
+                       MaxWidth="160" TextTrimming="CharacterEllipsis"/>
+            <TextBlock Grid.Column="3" x:Name="CoreVersionText" Text="内核 v--"
+                       Foreground="Gray" FontSize="11" Margin="8,0,0,0" VerticalAlignment="Center"
+                       MaxWidth="120" TextTrimming="CharacterEllipsis"/>
+        </Grid>
+    </Grid>
+</Window>

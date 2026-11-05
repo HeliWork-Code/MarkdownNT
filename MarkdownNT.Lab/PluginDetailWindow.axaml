@@ -1,0 +1,10 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MarkdownNT.Lab.PluginDetailWindow"
+        Title="插件详细信息" Width="600" Height="400">
+    <Border Padding="12">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="DetailText" TextWrapping="Wrap" FontFamily="Consolas,monospace"/>
+        </ScrollViewer>
+    </Border>
+</Window>
